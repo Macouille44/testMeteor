@@ -12,3 +12,7 @@ Meteor app uses:
 - accounts-ui
 - accounts-password
 - iron:router
+
+
+##Next step
+Prepare the project for tests
