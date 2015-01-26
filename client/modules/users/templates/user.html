@@ -1,22 +1,21 @@
 <template name="user">
-    One user selected:
 
     <form class="user">
         <input name="_id" type="hidden" value="{{_id}}" />
 
-        <label for="username" class="form-label">User Name</label>
+        <label for="username" class="form-label">{{_ "label_username"}}</label>
         <input name="username" class="form-control" readonly type="text" value="{{username}}" />
 
-        <label class="form-label">Available Languages</label>
+        <label class="form-label">{{_ "label_languages"}}</label>
         <select name="language" class="form-control">
             {{#each all_languages}}
             <option value="{{code}}">{{name}}</option>
             {{/each}}
         </select>
-        <i class="form-label">Current language: {{current_language}}</i>
+        <i class="form-label">{{_ "label_currentLanguage"}}: {{current_language}}</i>
 
 
-        <button type="submit">Save Changes</button>
+        <button type="submit">{{_ "button_save"}}</button>
 
     </form>
 
