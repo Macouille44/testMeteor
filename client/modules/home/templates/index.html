@@ -9,7 +9,9 @@
             <header>
                 <h1>Test Meteor</h1>
                 {{> loginButtons}}
+                {{#if nb_users}}
                 <a href="users">Go to Users</a>
+                {{/if}}
             </header>
 
             {{> yield}}
