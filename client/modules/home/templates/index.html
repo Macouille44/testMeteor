@@ -5,11 +5,11 @@
     </head>
 
     <body>
+        {{> notifications}}
         <div class="container">
             <header>
                 <h1>Test Meteor</h1>
-                {{> loginButtons}}
-                {{#if nb_users}}
+                {{> loginButtons}} {{#if nb_users}}
                 <a href="users">Go to Users</a>
                 {{/if}}
             </header>

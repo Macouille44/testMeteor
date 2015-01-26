@@ -1,4 +1,23 @@
 <template name="user">
-    One user selected: {{username}}
+    One user selected:
+
+    <form class="user">
+        <input name="_id" type="hidden" value="{{_id}}" />
+
+        <label for="username" class="form-label">User Name</label>
+        <input name="username" class="form-control" readonly type="text" value="{{username}}" />
+
+        <label class="form-label">Available Languages</label>
+        <select name="language" class="form-control">
+            {{#each all_languages}}
+            <option value="{{code}}">{{name}}</option>
+            {{/each}}
+        </select>
+        <i class="form-label">Current language: {{current_language}}</i>
+
+
+        <button type="submit">Save Changes</button>
+
+    </form>
 
 </template>

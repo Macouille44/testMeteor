@@ -14,6 +14,6 @@ Meteor app uses:
 - iron:router
 
 
-##Next step
+##Next steps
 - check the user creation (form, user rights, languages, translation)
 - Prepare the project for tests

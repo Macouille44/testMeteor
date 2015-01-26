@@ -51,3 +51,16 @@ li {
   padding: 15px;
   border-bottom: #eee solid 1px;
 }
+
+.form-label{
+    display: block;
+    width: 100%;
+    margin: 5px;
+}
+
+.form-control {
+    display: block;
+    width: 90%;
+    padding-left: 3px;
+    margin: 10px;
+}
