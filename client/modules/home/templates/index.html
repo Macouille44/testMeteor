@@ -1,0 +1,19 @@
+<template name="index">
+
+    <head>
+        <title>Todo List</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1>Test Meteor</h1>
+                {{> loginButtons}}
+                <a href="users">Go to Users</a>
+            </header>
+
+            {{> yield}}
+
+        </div>
+    </body>
+</template>
