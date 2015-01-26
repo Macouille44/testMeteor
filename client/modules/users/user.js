@@ -1,9 +1,12 @@
 Meteor.subscribe("languages");
 
 Template.user.helpers({
+    //Languages available
     all_languages: function () {
         return Languages.find();
     },
+
+    //Selected user current language
     current_language: function () {
         var selectedUse = Router.current().params.username;
 
@@ -33,6 +36,6 @@ Template.user.events({
             }
         });
 
-        return false;
+        return false; //avoid standard form submit
     }
 });
