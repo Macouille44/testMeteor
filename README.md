@@ -15,4 +15,5 @@ Meteor app uses:
 
 
 ##Next step
-Prepare the project for tests
+- check the user creation (form, user rights, languages, translation)
+- Prepare the project for tests
