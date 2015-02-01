@@ -3,16 +3,16 @@ Meteor.publish("languages", function () {
 });
 
 Meteor.methods({
-    updateUser: function (id, language) {
+    updateUser: function (user) {
         if (!Meteor.userId()) {
             throw new Meteor.Error("Not authorized");
         }
 
         Meteor.users.update({
-            _id: id
+            _id: user.id
         }, {
             $set: {
-                "profile.language": language
+                "profile.language": user.language
             }
         }, function (error) {
             return error;

@@ -25,10 +25,8 @@ Template.user.helpers({
 
 Template.user.events({
     "submit .user": function (event) {
-        var id = event.target._id.value;
-        var language = event.target.language.value;
-
-        Meteor.call("updateUser", id, language, function (error) {
+        var user = new User(event.target._id.value, "", event.target.language.value);
+        user.save(function (error) {
             if (error == null || error == undefined) {
                 Notifications.success('User Update', 'Success');
             } else {
