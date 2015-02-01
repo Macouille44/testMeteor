@@ -3,19 +3,20 @@ Meteor.publish("languages", function () {
 });
 
 Meteor.methods({
-    updateUser: function (user) {
+    updateUser: function (user, callback) {
+        debugger;
         if (!Meteor.userId()) {
             throw new Meteor.Error("Not authorized");
         }
 
-        Meteor.users.update({
-            _id: user.id
-        }, {
-            $set: {
-                "profile.language": user.language
-            }
-        }, function (error) {
-            return error;
-        });
+        if (user._language !== "") {
+            Meteor.users.update({
+                _id: user._id
+            }, {
+                $set: {
+                    "profile.language": user._language
+                }
+            }, callback);
+        }
     }
 });

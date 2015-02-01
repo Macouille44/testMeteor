@@ -28,7 +28,7 @@ Template.user.events({
         var user = new User(event.target._id.value, "", event.target.language.value);
         user.save(function (error) {
             if (error == null || error == undefined) {
-                Notifications.success('User Update', 'Success');
+                Notifications.success('User Update', 'Success', {timeout: 2000});
             } else {
                 Notifications.error('User Update', error.message);
             }
